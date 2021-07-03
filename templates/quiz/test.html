@@ -1,0 +1,30 @@
+{% extends 'quiz/base-nomenu.html' %}
+{% block title %}Test{% endblock %}
+{% block content %}
+
+<form method="POST" action="/test/">
+    {% csrf_token %}
+    <div class="row mb-3">
+      <label for="question" class="col-sm-2 col-form-label">Question</label>
+      <div class="col-sm-10">
+        <p id="question">{{question.question}}</p>
+      </div>
+    </div>
+
+    <fieldset class="row mb-3">
+      <legend class="col-form-label col-sm-2 pt-0">Options</legend>
+      <div class="col-sm-10">
+          {% for option in question.option_set.all %}
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="options" id="option{{option.number}}" value="option{{option.number}}" checked>
+          <label class="form-check-label" for="option{{option.number}}">
+            {{option.desc}}
+          </label>
+        </div>
+        {% endfor %}
+      </div>
+    </fieldset>
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock %}

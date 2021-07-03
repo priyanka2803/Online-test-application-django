@@ -1,0 +1,28 @@
+{% extends 'quiz/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+{% block heading %}Add Tests{% endblock %}
+
+{% block dashboardItem1Icon %}fa fa-file-alt{% endblock %}
+{% block dashboardItem2Icon %}fa fa-eye{% endblock %}
+{% block dashboardItem3Icon %}fas fa-sign-out-alt{% endblock %}
+
+{% block dashboardItem1 %}Add Test{% endblock %}
+{% block dashboardItem2 %}View Tests{% endblock %}
+{% block dashboardItem3 %}Sign Out{% endblock %}
+
+{% block dashboardItem1Link %}/teacher/addTest{% endblock %}
+{% block dashboardItem2Link %}/teacher/viewTests{% endblock %}
+{% block dashboardItem3Link %}/logout/{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<form method="POST" class="form-group" action="/teacher/saveTest/">
+	{% csrf_token %}
+	{{ subjectForm|crispy }}
+	{{ testForm|crispy }}
+    <button type="submit" class="btn btn-success" name="submit" value="submit">Add</button>
+</form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'quiz/base.html' %}
+
+{% block title %}AddTeacher{% endblock %}
+{% block heading %}Add Teacher{% endblock %}
+{% block dashboardItem1Icon %}fa fa-bars{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form method="POST" class="form-group" action="/teacher/save/">
+	{% csrf_token %}
+	{{ userForm|crispy }}
+	{{ teacherForm|crispy }}<br>
+	<button type="submit" class="btn btn-success" name="submit" value="submit">Register</button>
+</form>
+{% endblock %}

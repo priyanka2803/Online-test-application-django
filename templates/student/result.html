@@ -1,0 +1,57 @@
+{% extends 'quiz/base.html' %}
+{% load custom_tags %}
+
+{% block title %}Result{% endblock %}
+{% block heading %}Result{% endblock %}
+
+{% block dashboardItem1Icon %}fas fa-user-graduate{% endblock %}
+{% block dashboardItem2Icon %}fas fa-file-alt{% endblock %}
+{% block dashboardItem3Icon %}fas fa-file-alt{% endblock %}
+{% block dashboardItem4Icon %}fas fa-sign-out-alt{% endblock %}
+
+{% block dashboardItem1 %}View Subjects{% endblock %}
+{% block dashboardItem2 %}View All Tests{% endblock %}
+{% block dashboardItem3 %}View All Scores{% endblock %}
+{% block dashboardItem4 %}Sign Out{% endblock %}
+
+{% block dashboardItem1Link %}/student/viewSubjects{% endblock %}
+{% block dashboardItem2Link %}/student/viewTests{% endblock %}
+{% block dashboardItem3Link %}/student/viewScores{% endblock %}
+{% block dashboardItem4Link %}/logout/{% endblock %}
+
+{% block content %}
+<center>
+<table>
+    <td>
+        <table class="table table-condensed">
+            <tr>
+                <th>Question</th>
+                <th>Correct Option</th>
+            </tr>
+            {% for question in test.question_set.all %}
+            <tr>
+                    <td>{{question.question}}</td>
+                    <td>{{question.correctOption}}  </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </td>
+    <td>
+        <table class="table table-condensed">
+            <tr>
+                <th>Your answer</th>
+                <th>Score</th>
+            </tr>
+            {% for a in answers %}
+            <tr>
+                {% for i in a %}
+                   <td>{{i}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </td>
+</table>
+</center>
+<center><h5 class="display-5">Your Score = {{score}}</h5></center>
+{% endblock %}

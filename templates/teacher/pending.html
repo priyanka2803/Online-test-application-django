@@ -1,0 +1,16 @@
+{% extends 'quiz/base.html' %}
+
+{% block title %}Request Pending{% endblock %}
+{% block heading %}Hi {{username}}! {% endblock %}
+
+{% block dashboardItem1 %}Sign Out{% endblock %}
+{% block dashboardItem1Link %}/logout/{% endblock %}
+{% block dashboardItem1Icon %}fas fa-sign-out-alt{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<p>Dear Applicant, Your Review Status is pending. Please Check back later!</p>
+
+{% endblock %}

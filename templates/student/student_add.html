@@ -1,0 +1,22 @@
+{% extends 'quiz/base.html' %}
+
+{% block style %}
+ul,li,ol{
+color:white;	
+} 
+{% endblock %} 
+{% block title %}Student Sign UP{% endblock %}
+{% block heading %}Create An Account{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container-sm p-3 my-3 bg-secondary text-white w-50">
+<form method="POST" class="form-group text-white" action="/student/save/">
+	{% csrf_token %}
+	{{ userForm|crispy }}
+	{{ studentForm|crispy }}
+	<br>
+	<center><button type="submit" class="btn btn-success" name="submit" value="submit">Register</button></center>
+</form>
+</div>
+{% endblock %}

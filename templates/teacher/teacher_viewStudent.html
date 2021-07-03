@@ -1,0 +1,31 @@
+{% extends 'quiz/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+{% block heading %} Student {% endblock %}
+
+{% block dashboardItem1Icon %}fa fa-user-graduate{% endblock %}
+{% block dashboardItem2Icon %}fa fa-file-alt{% endblock %}
+{% block dashboardItem3Icon %}fa fa-eye{% endblock %}
+{% block dashboardItem4Icon %}fa fa-eye{% endblock %}
+
+{% block dashboardItem1 %}Add Student{% endblock %}
+{% block dashboardItem2 %}Add Test{% endblock %}
+{% block dashboardItem3 %}View Students{% endblock %}
+{% block dashboardItem4 %}View Tests{% endblock %}
+
+{% block dashboardItem1Link %}/student/create{% endblock %}
+{% block dashboardItem2Link %}/teacher/addTest{% endblock %}
+{% block dashboardItem3Link %}/teacher/viewStudents{% endblock %}
+{% block dashboardItem4Link %}/teacher/viewTests{% endblock %}
+
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<li>Name : {{student.user.first_name}} {{student.user.last_name}}</li>
+<li>Email : {{student.user.email}}</li>
+<li>Phone Number : {{student.mobile}}</li>
+<li>Username : {{student.user.username}}</li>
+
+{% endblock %}

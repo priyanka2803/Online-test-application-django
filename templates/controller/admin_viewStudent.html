@@ -1,0 +1,41 @@
+{% extends 'quiz/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+{% block heading %} Student {% endblock %}
+
+{% block dashboardItem1Icon %}fa fa-user-graduate{% endblock %}
+{% block dashboardItem2Icon %}fa fa-file-alt{% endblock %}
+{% block dashboardItem3Icon %}fa fa-user{% endblock %}
+{% block dashboardItem4Icon %}fa fa-eye{% endblock %}
+{% block dashboardItem5Icon %}fa fa-eye{% endblock %}
+{% block dashboardItem6Icon %}fa fa-eye{% endblock %}
+{% block dashboardItem7Icon %}fas fa-sign-out-alt{% endblock %}
+
+{% block dashboardItem1 %}Add Student{% endblock %}
+{% block dashboardItem2 %}Add Test{% endblock %}
+{% block dashboardItem3 %}Add Teacher{% endblock %}
+{% block dashboardItem4 %}View Teacher{% endblock %}
+{% block dashboardItem5 %}View Students{% endblock %}
+{% block dashboardItem6 %}View Tests{% endblock %}
+{% block dashboardItem7 %}Sign Out{% endblock %}
+
+
+{% block dashboardItem1Link %}/student/create{% endblock %}
+{% block dashboardItem2Link %}/ap/addTest{% endblock %}
+{% block dashboardItem3Link %}/ap/addTeacher{% endblock %}
+{% block dashboardItem4Link %}/ap/viewTeachers{% endblock %}
+{% block dashboardItem5Link %}/ap/viewStudents{% endblock %}
+{% block dashboardItem6Link %}/ap/viewTests{% endblock %}
+{% block dashboardItem7Link %}/logout{% endblock %}
+
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<li>Name : {{student.user.first_name}} {{student.user.last_name}}</li>
+<li>Email : {{student.user.email}}</li>
+<li>Phone Number : {{student.mobile}}</li>
+<li>Username : {{student.user.username}}</li>
+
+{% endblock %}

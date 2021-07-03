@@ -1,0 +1,38 @@
+{% extends 'quiz/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+{% block heading %} Students {% endblock %}
+
+{% block dashboardItem1Icon %}fa fa-user-graduate{% endblock %}
+{% block dashboardItem2Icon %}fa fa-file-alt{% endblock %}
+{% block dashboardItem3Icon %}fa fa-eye{% endblock %}
+{% block dashboardItem4Icon %}fa fa-eye{% endblock %}
+
+{% block dashboardItem1 %}Add Student{% endblock %}
+{% block dashboardItem2 %}Add Test{% endblock %}
+{% block dashboardItem3 %}View Students{% endblock %}
+{% block dashboardItem4 %}View Tests{% endblock %}
+
+{% block dashboardItem1Link %}/student/create{% endblock %}
+{% block dashboardItem2Link %}/teacher/addTest{% endblock %}
+{% block dashboardItem3Link %}/teacher/viewStudents{% endblock %}
+{% block dashboardItem4Link %}/teacher/viewTests{% endblock %}
+
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    {% for student in students %}
+        <center>
+            <table class="table table-light table-striped w-50">
+                <tr>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td><a class="link-dark text-decoration-none" href = "/teacher/viewStudent/{{student.id}}"> {{student.id}} - {{student}} </a></td>
+                </tr>
+            </table>
+        </center>
+    {% endfor %}
+{% endblock %}

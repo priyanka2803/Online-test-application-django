@@ -1,0 +1,23 @@
+{% extends 'quiz/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+{% block heading %}Hi {{username}}! {% endblock %}
+
+{% block dashboardItem1Icon %}fa fa-file-alt{% endblock %}
+{% block dashboardItem2Icon %}fa fa-eye{% endblock %}
+{% block dashboardItem3Icon %}fas fa-sign-out-alt{% endblock %}
+
+{% block dashboardItem1 %}Add Test{% endblock %}
+{% block dashboardItem2 %}View Tests{% endblock %}
+{% block dashboardItem3 %}Sign Out{% endblock %}
+
+{% block dashboardItem1Link %}/teacher/addTest{% endblock %}
+{% block dashboardItem2Link %}/teacher/viewTests{% endblock %}
+{% block dashboardItem3Link %}/logout/{% endblock %}
+
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+{% endblock %}

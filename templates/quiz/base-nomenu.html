@@ -1,0 +1,60 @@
+{% load custom_tags %}
+{% load custom_tags %}
+{% load static %}
+<html>
+    <head>
+       <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <script src="https://kit.fontawesome.com/7e124143b4.js" crossorigin="anonymous"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <title>{% block title %}{% endblock %}</title>
+        <style>
+         {% block style %} {% endblock %}   
+        </style>
+    </head>
+    <body>
+       
+       <div class="navigation" id="navigation">
+             <img src="{% static 'img/logo.png' %}">
+            <a href="/">Home</a>
+            <a href="/ap/login">Admin</a>
+            <a href="/teacher/login">Teacher</a>
+            <a href="/student/login">Student</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fas fa-bars"></i></a>
+        </div>
+
+    <div class="container-fluid overflow-hidden">
+        <div class="row vh-100 overflow-auto">
+            <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 bg-primary d-flex sticky-top">
+                    {% block menu %} {% endblock %}
+            </div>
+            <div class="col d-flex flex-column h-sm-100">
+                <main class="row overflow-auto">
+                    <h3 class="display-3" style="text-align:center">{% block heading %}{% endblock %}</h3>
+                    <div class="col pt-4">
+                        {% block content %}{% endblock %}
+                    </div>
+                </main>
+               <footer class="row bg-light text-center text-white py-4 mt-auto">
+             <br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div  class="wow fadeInUp footer-copyright text-muted">
+                                <p>APQuiz <br> By Amisha Ajwani and Priyanka Makhija </p><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

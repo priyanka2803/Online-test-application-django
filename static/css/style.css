@@ -1,0 +1,294 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+.navigation{
+    padding:1%;
+    overflow:hidden;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: black;
+    text-align: center;
+}
+.navigation a{
+    float:left;
+    color:white;
+    padding-right: 2%;
+    text-decoration: none;
+}
+.navigation input[type=search] {
+    margin-right:5%;
+    float:left;
+    background-color: grey;
+    color:white;
+} 
+::placeholder{
+    color: white;
+}
+.navigation img{
+    padding-right:5%;
+    float: left;
+    width: 7%;
+}
+.navigation .icon{
+    display: hidden;
+    visibility: hidden;
+}
+@media screen and (max-width:768px){
+    .navigation .responsive{
+        position: relative;
+    }
+    .navigation a:not(:first-child) {display: none;}
+    .navigation a.icon {
+        float: right;
+        display: block;
+        visibility: visible;
+      }
+    .navigation.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navigation input[type="search"]{
+        display: none;
+    }
+    .navigation img{
+        width:10%;
+    }
+}
+.heading{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4em;
+    font-weight: normal;
+    color: white;
+    opacity: 1;
+
+}
+
+.intro {
+    background-color: black;
+    color: rgba(255, 255, 255, 0.52);
+    opacity: 90%;
+    width:100%;
+    padding-top: 4%;
+    padding-bottom: 5%;
+    overflow: hidden;
+}
+.highlight{
+    color: white;
+    opacity: 1;
+}
+.form-container{
+    float: left;
+    padding: 2%;
+    width:40%;
+    padding-left: 5%;
+}
+
+.form-inner-container{
+    color: black;
+    width: 50%;
+    text-align: center;
+    padding: 5%;
+    float: left;
+}
+
+.description {
+    float:left;
+    color: inherit;
+    background-color: inherit;
+    width:50%;
+    padding-top: 1%;
+    margin-top: 1%;
+}
+
+form ::placeholder{
+    color: black;
+}
+
+.form-inner-container label{
+    text-align: right;
+}
+
+.description-inner{
+    width:70%;
+    float: right;
+}
+
+.form-container input[type=submit]
+{
+    background-color: green;
+}
+.form-container input[type="text"], .form-container input[type="email"], .form-container input[type="password"],.form-container input[type="submit"]{
+    width: 100%;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+  }
+  
+  .column.side {
+    width: 40%;
+  }
+  
+  .column.middle {
+    width: 50%;
+  }
+  .column .large{
+      width:70%;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+@media screen and (max-width:768px){
+    .description{
+        width: 100%;
+        display: block;
+        padding: 0;
+    }
+    .form-container{
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 0;
+        
+    }
+    .description-inner{ 
+        float:none;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+    }
+    .form-inner-container{
+        float: none;
+        margin: auto;
+    }
+    .column.middle, .column.side, .column .large{
+        width: 100%;
+    }
+
+    .column.middle img, .column.side img, .column .large img{
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width:425px) {
+    .form-container{
+        display:none;
+    }
+    .description-inner{
+        width:80%;
+    }
+    .heading{
+        font-size: 2.5em;
+    }
+    
+}
+
+.disclaimer{
+    font-size: 0.7em;
+    word-wrap:break-word;
+}
+
+.signup{
+    text-align: center;
+    padding: 2%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.signup-inner{
+    width:100%;
+}
+
+.signup .btn{
+    background-color: white;
+    border:1px solid grey;
+    color:dodgerblue;
+    font-weight: bold;
+    padding: 2%;
+}
+/*Amisha Meet the team*/
+body{
+    background:#F5F5F5;
+    margin-top:20px;}
+.team-list img {
+    width: 50%;
+}
+.team-list .content {
+    width: 50%;
+}
+.team, .team-list {
+    -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+}
+.shadow {
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15) !important;
+}
+.rounded {
+    border-radius: 5px !important;
+}
+.team-list .content .follow {
+    position: absolute;
+    bottom: 24px;
+}
+.list-inline-item:not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+.social-icon.social li a {
+    color: #adb5bd;
+    border-color: #adb5bd;
+}
+.social-icon li a {
+    color: #35404e;
+    border: 1px solid #35404e;
+    display: inline-block;
+    height: 32px;
+    text-align: center;
+    font-size: 15px;
+    width: 32px;
+    line-height: 30px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    position: relative;
+}
+.progress-box .progress .progress-bar {
+    height: 4px;
+    border-radius: 10px;
+    margin: auto 5px;
+    -webkit-animation: animate-positive 3s;
+    animation: animate-positive 3s;
+    overflow: visible !important;
+}
+.rounded {
+    border-radius: 5px !important;
+}
+
+.progress-box .title {
+    font-size: 15px !important;
+}
+.text-muted {
+    color: #8492a6 !important;
+}
+
+.progress-box .progress {
+    height: 9px;
+    overflow: visible;
+    background: #eceef5;
+}
+
+.progress-box .progress .progress-value {
+    position: absolute;
+    top: -25px;
+    right: -15px;
+    font-size: 13px;
+}

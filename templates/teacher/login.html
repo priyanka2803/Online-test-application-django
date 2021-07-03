@@ -1,0 +1,17 @@
+{% extends "quiz/base-nomenu.html" %}
+
+{% block title %}Login Here{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container-sm p-3 my-3 bg-secondary text-white w-50">
+<center><h1>Teacher Login</h1></center>
+    <form method="post" class="form-group">
+	{% csrf_token %}
+	{{form|crispy}}<br>
+	<p>Don't have an accoount? Create one <a class="link-warning" href="/teacher/create">here</a></p><br>
+	<center><button type="submit" class="btn btn-success">Login</button></center>
+    </form>
+</div>
+{% endblock %}

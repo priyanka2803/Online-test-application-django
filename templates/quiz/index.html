@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <script src="https://kit.fontawesome.com/7e124143b4.js" crossorigin="anonymous"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        <title>Home</title>
+    </head>
+    <body>
+        <div class="navigation" id="navigation">
+            <img src="{% static 'img/logo.png' %}">
+            <a href="/">Home</a>
+            <a href="/ap/login">Admin</a>
+            <a href="/teacher/login">Teacher</a>
+            <a href="/student/login">Student</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fas fa-bars"></i></a>
+        </div>
+
+        <div class="intro">
+            <div class="description">
+                <div class="description-inner">
+                    <h1 class="heading">Be Your Own Critic!</h1>
+                    <p> Bringing quizes from the expert of the field specially curated to test <span class="highlight">your in depth knowledge</span> of the course. Couldn't Succeed in one go? No issues you can take a single test multiple times.</p><br>
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="form-inner-container">
+                    <img src="{% static 'img/banner1.png' %}">
+                </div>
+            </div>
+        </div>
+     
+            <section class="my-5">
+                <h2 class="h1-responsive font-weight-bold text-center my-5">What we bring?</h2>
+                <div class="row">
+                <div class="col-lg-5 text-center text-lg-left">
+                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/screens-section.jpg" alt="Sample image">
+                </div>
+                
+                <div class="col-lg-7 align-self-center">
+
+                    <div class="row mb-3 align-self-center">
+                    <div class="col-xl-10 col-md-11 col-10 align-self-middle align-self-center">
+                        <p class="grey-text">We bring the questions from the expert from various feilds with extensive knowledge
+                         to you at the comfort of your home </p>
+                    </div>
+            
+                    </div>
+            
+                </div>
+                </div>
+            
+            </section>
+
+        <div name="Meet The Team" class= "intro">
+           <div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <div class="section-title mb-4 pb-2">
+                <h4 class="title mb-4">Our Team Members</h4>
+                <p class="text-muted para-desc mx-auto mb-0"></p>
+            </div>
+        </div><!--end col-->
+    </div><!--end row-->
+
+    <div class="row">
+        <div class="col-md-6 col-12 mt-4 pt-2" >
+            <div class="team-list position-relative overflow-hidden shadow rounded">
+                <img src="{% static 'img/amisha.jpg' %}" class="img-fluid float-left" alt="">
+                <div class="content float-right p-4">
+                    <h5 class="title mb-0">Amisha Ajwani</h5>
+                    <small class="text-muted">Founder and C.E.O</small>
+                    <p class="text-muted mt-3">I hope you are able to benefit from this platform to the fullest and succeed in your endevours.</p>
+                    
+                </div>
+            </div>                        
+        </div><!--end col-->
+        
+        <div class="col-md-6 col-12 mt-4 pt-2">
+            <div class="team-list position-relative overflow-hidden shadow rounded">
+               <img src="{% static 'img/priyankam.jpg' %}" class="img-fluid float-left" alt="">
+                <div class="content float-right p-4">
+                    <h5 class="title mb-0">Priyanka Makhija</h5>
+                    <small class="text-muted">Cofounder and C.O.O.</small>
+                    <p class="text-muted mt-3">I hope you learn as much as you can and help back the team to bring value to the students like you and me!</p>
+                </div>
+            </div>                        
+        </div><!--end col-->
+    </div><!--end row-->
+
+   
+    </div><!--end row-->
+</div>
+        </div>
+            <div style="float:none;width:100%;clear:both;">{% include 'quiz/footer.html' %}</div>
+    </body>
+</html>

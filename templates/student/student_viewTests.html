@@ -1,0 +1,34 @@
+{% extends 'quiz/base.html' %}
+
+{% block title %}Tests{% endblock %}
+{% block heading %}Tests{% endblock %}
+
+{% block dashboardItem1Icon %}fas fa-user-graduate{% endblock %}
+{% block dashboardItem2Icon %}fas fa-file-alt{% endblock %}
+{% block dashboardItem3Icon %}fas fa-file-alt{% endblock %}
+{% block dashboardItem4Icon %}fas fa-sign-out-alt{% endblock %}
+
+{% block dashboardItem1 %}View Subjects{% endblock %}
+{% block dashboardItem2 %}View All Tests{% endblock %}
+{% block dashboardItem3 %}View All Scores{% endblock %}
+{% block dashboardItem4 %}Sign Out{% endblock %}
+
+{% block dashboardItem1Link %}/student/viewSubjects{% endblock %}
+{% block dashboardItem2Link %}/student/viewTests{% endblock %}
+{% block dashboardItem3Link %}/student/viewScores{% endblock %}
+{% block dashboardItem4Link %}/logout/{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<center>
+   <table class="table table-light table-striped w-50">
+    {% for t in tests %}
+    <tr>
+        <td><a class="link-dark text-decoration-none" href = "/start/{{t.id}}">{{t.id}} - {{t.subject.subName}} </a></td>
+    </tr>
+
+{% endfor %}
+</table>
+</center>
+{% endblock %}  
